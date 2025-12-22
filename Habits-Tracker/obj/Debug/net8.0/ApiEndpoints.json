@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "Habits_Tracker.Controllers.ActivitiesController",
+    "Method": "AddActivity",
+    "RelativePath": "api/Activities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activityDto",
+        "Type": "Habits_Tracker.DTO.ActivityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.ActivitiesController",
+    "Method": "GetActivity",
+    "RelativePath": "api/Activities/{activityId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activityId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.ActivitiesController",
+    "Method": "UpdateActivity",
+    "RelativePath": "api/Activities/{activityId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activityId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "activityDto",
+        "Type": "Habits_Tracker.DTO.ActivityDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.ActivitiesController",
+    "Method": "DeleteActivity",
+    "RelativePath": "api/Activities/{activityId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "activityId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.ActivitiesController",
+    "Method": "GetAllActivities",
+    "RelativePath": "api/Activities/GetAllActivities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
