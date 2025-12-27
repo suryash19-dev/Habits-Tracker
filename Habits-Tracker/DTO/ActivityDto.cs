@@ -2,6 +2,7 @@
 {
     public class ActivityDto
     {
-        public string ActivityName { get; set; }
+        public required string ActivityName { get; set; }
+        public string? ActivityDetails { get; set; }
     }
 }

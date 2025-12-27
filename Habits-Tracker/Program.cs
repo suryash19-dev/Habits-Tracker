@@ -39,10 +39,19 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 ));
 
 // Injecting Automapper
+
 builder.Services.AddAutoMapper(cfg => { },
     Assembly.GetExecutingAssembly());
 
+// Injecting Services
+
 builder.Services.AddScoped<IActivitiesService, ActivitiesService>();
+
+builder.Services.AddScoped<IMetricDefinitionService, MetricDefinitionService>();
+
+builder.Services.AddScoped<IHabitLogService, HabitLogService>();
+
+builder.Services.AddScoped<IDailyMetricValueService, DailyMetricValueService>();
 
 var app = builder.Build();
 

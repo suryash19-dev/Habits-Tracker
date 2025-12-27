@@ -1,0 +1,64 @@
+{
+  "dailyMetrics": [
+    {
+      "date": "2025-12-20",
+      "metrics": [
+        {
+          "metricId": 1,
+          "name": "Water Intake",
+          "unit": "Liters",
+          "value": 2.5
+        },
+        {
+          "metricId": 2,
+          "name": "Sleep",
+          "unit": "Hours",
+          "value": 7
+        }
+      ]
+    },
+    {
+      "date": "2025-12-21",
+      "metrics": [
+        {
+          "metricId": 1,
+          "name": "Water Intake",
+          "unit": "Liters",
+          "value": 1.0
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "activityId": 1,
+      "activityName": "Exercise",
+      "activityDetails": "Do 30 min daily",
+      "datesData": [
+        {
+          "date": "2025-12-20",
+          "isActive": true
+        },
+        {
+          "date": "2025-12-21",
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "activityId": 2,
+      "activityName": "Read Book",
+      "activityDetails": "Read 20 pages",
+      "datesData": [
+        {
+          "date": "2025-12-20",
+          "isActive": true
+        },
+        {
+          "date": "2025-12-21",
+          "isActive": true
+        }
+      ]
+    }
+  ]
+}

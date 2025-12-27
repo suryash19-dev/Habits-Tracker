@@ -77,5 +77,84 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.MetricDefinitionController",
+    "Method": "AddMetricDefinition",
+    "RelativePath": "api/MetricDefinition",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "metricDefinitionDto",
+        "Type": "Habits_Tracker.DTO.MetricDefinitionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.MetricDefinitionController",
+    "Method": "GetMetricDefinitionById",
+    "RelativePath": "api/MetricDefinition/{metricDefinitionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "metricDefinitionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.MetricDefinitionController",
+    "Method": "UpdateMetricDefinition",
+    "RelativePath": "api/MetricDefinition/{metricDefinitionId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "metricDefinitionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "metricDefinitionDto",
+        "Type": "Habits_Tracker.DTO.MetricDefinitionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.MetricDefinitionController",
+    "Method": "DeleteMetricDefinition",
+    "RelativePath": "api/MetricDefinition/{metricDefinitionId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "metricDefinitionId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.MetricDefinitionController",
+    "Method": "GetAllMetricDefinitions",
+    "RelativePath": "api/MetricDefinition/GetAllMetricDefinitions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

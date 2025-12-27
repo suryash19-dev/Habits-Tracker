@@ -98,7 +98,7 @@ namespace Habits_Tracker.Services
                 return errorResponse;
             }
 
-            var activity = _mapper.Map<Activities>(activityDto);
+            var activity = _mapper.Map<Activity>(activityDto);
             
             await _dbContext.AddAsync(activity);
             await _dbContext.SaveChangesAsync();

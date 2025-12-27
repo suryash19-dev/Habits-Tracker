@@ -8,8 +8,17 @@ namespace Habits_Tracker.Data
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<Activities> Activities { get; set; }
-        public DbSet<HabitsChart> HabitsChart { get; set; }
-        public DbSet<WaterIntake> WaterIntake { get; set; }
+        public DbSet<Activity> Activities => Set<Activity>();
+        public DbSet<HabitLog> HabitLogs => Set<HabitLog>();
+        public DbSet<MetricDefinition> MetricDefinitions => Set<MetricDefinition>();
+        public DbSet<DailyMetricValue> DailyMetricValues => Set<DailyMetricValue>();
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(
+                typeof(ApplicationDbContext).Assembly);
+        }
     }
 }

@@ -131,14 +131,165 @@
           }
         }
       }
+    },
+    "/api/MetricDefinition/GetAllMetricDefinitions": {
+      "get": {
+        "tags": [
+          "MetricDefinition"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MetricDefinition/{metricDefinitionId}": {
+      "get": {
+        "tags": [
+          "MetricDefinition"
+        ],
+        "parameters": [
+          {
+            "name": "metricDefinitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "MetricDefinition"
+        ],
+        "parameters": [
+          {
+            "name": "metricDefinitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MetricDefinitionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MetricDefinitionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MetricDefinitionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "MetricDefinition"
+        ],
+        "parameters": [
+          {
+            "name": "metricDefinitionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MetricDefinition": {
+      "post": {
+        "tags": [
+          "MetricDefinition"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MetricDefinitionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MetricDefinitionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MetricDefinitionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
       "ActivityDto": {
+        "required": [
+          "activityName"
+        ],
         "type": "object",
         "properties": {
           "activityName": {
+            "type": "string",
+            "nullable": true
+          },
+          "activityDetails": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MetricDefinitionDto": {
+        "required": [
+          "metricName"
+        ],
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "nullable": true
+          },
+          "unit": {
             "type": "string",
             "nullable": true
           }

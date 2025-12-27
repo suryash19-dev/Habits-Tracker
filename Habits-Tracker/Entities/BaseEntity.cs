@@ -2,7 +2,7 @@
 
 namespace Habits_Tracker.Entities
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
         [Key]
         public int Id { get; set; }
