@@ -10,6 +10,9 @@ namespace Habits_Tracker.Configurations
         {
             builder.ToTable("Activities");
 
+            builder.HasIndex(a => a.ActivityName)
+                .IsUnique();
+
             builder.HasKey(a => a.Id);
 
             builder.Property(a => a.ActivityName)

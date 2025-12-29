@@ -4,6 +4,7 @@ using Habits_Tracker.DTO;
 using Habits_Tracker.Entities;
 using Habits_Tracker.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
 
 namespace Habits_Tracker.Services
 {
@@ -29,6 +30,16 @@ namespace Habits_Tracker.Services
         #region Methods
         public virtual async Task<ResultDto<DailyMetricValueResponseDto>> UpsertDailyMetricsAsync(DailyMetricValueDto dailyMetricValueDto)
         {
+
+            if(dailyMetricValueDto.MetricValue < 0)
+            {
+                return new ResultDto<DailyMetricValueResponseDto>
+                {
+                    ErrorMessage = StringResources.NegativeValue,
+                    StatusCode = HttpStatusCode.BadRequest
+                };
+            }
+
             var metricValue = await _dbContext.DailyMetricValues
                 .FirstOrDefaultAsync(m => m.MetricDefinitionId == dailyMetricValueDto.MetricDefinitionId
                 && m.Date == dailyMetricValueDto.Date);
