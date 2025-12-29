@@ -4,6 +4,6 @@ namespace Habits_Tracker.Interfaces
 {
     public interface IHabitLogService
     {
-        Task<ResultDto<List<HabitLogResponseDto>>> GetAllHabitLogs();
+        Task<ResultDto<HabitLogResponseDto>> UpsertHabitLogAsync(HabitLogDto habitLogDto);
     }
 }

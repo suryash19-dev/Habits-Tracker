@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Habits_Tracker.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251227073055_db-changes")]
-    partial class dbchanges
+    [Migration("20251228191615_newDbChanges")]
+    partial class newDbChanges
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,7 +55,7 @@ namespace Habits_Tracker.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateOnly>("MetricDate")
+                    b.Property<DateOnly>("Date")
                         .HasColumnType("date");
 
                     b.Property<int>("MetricDefinitionId")
@@ -67,7 +67,7 @@ namespace Habits_Tracker.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MetricDefinitionId", "MetricDate")
+                    b.HasIndex("MetricDefinitionId", "Date")
                         .IsUnique();
 
                     b.ToTable("DailyMetricValues", (string)null);

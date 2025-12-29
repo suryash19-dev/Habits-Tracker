@@ -79,6 +79,54 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Habits_Tracker.Controllers.DailyMetricValueController",
+    "Method": "UpsertDailyMetricValue",
+    "RelativePath": "api/DailyMetricValue",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dailyMetricValueDto",
+        "Type": "Habits_Tracker.DTO.DailyMetricValueDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.DashboardController",
+    "Method": "GetDashboard",
+    "RelativePath": "api/Dashboard/GetDashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "date",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Habits_Tracker.Controllers.HabitLogController",
+    "Method": "UpsertHabitLogs",
+    "RelativePath": "api/HabitLog",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "habitLogDto",
+        "Type": "Habits_Tracker.DTO.HabitLogDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Habits_Tracker.Controllers.MetricDefinitionController",
     "Method": "AddMetricDefinition",
     "RelativePath": "api/MetricDefinition",

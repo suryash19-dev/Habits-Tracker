@@ -3,6 +3,6 @@
     public class ActivityDateStatusDto
     {
         public DateOnly Date {  get; set; }
-        public bool IsActive {  get; set; }
+        public bool IsDone {  get; set; }
     }
 }

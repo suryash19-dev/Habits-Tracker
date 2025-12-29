@@ -53,6 +53,8 @@ builder.Services.AddScoped<IHabitLogService, HabitLogService>();
 
 builder.Services.AddScoped<IDailyMetricValueService, DailyMetricValueService>();
 
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

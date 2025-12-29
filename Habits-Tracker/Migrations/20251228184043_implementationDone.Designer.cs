@@ -4,6 +4,7 @@ using Habits_Tracker.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Habits_Tracker.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251228184043_implementationDone")]
+    partial class implementationDone
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,7 +55,7 @@ namespace Habits_Tracker.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateOnly>("Date")
+                    b.Property<DateOnly>("MetricDate")
                         .HasColumnType("date");
 
                     b.Property<int>("MetricDefinitionId")
@@ -64,7 +67,7 @@ namespace Habits_Tracker.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MetricDefinitionId", "Date")
+                    b.HasIndex("MetricDefinitionId", "MetricDate")
                         .IsUnique();
 
                     b.ToTable("DailyMetricValues", (string)null);

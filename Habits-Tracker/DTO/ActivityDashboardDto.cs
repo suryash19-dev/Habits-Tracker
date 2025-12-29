@@ -4,6 +4,7 @@
     {
         public int ActivityId { get; set; }
         public string ActivityName { get; set; }
+        public string ActivityDetails {  get; set; }
         public List<ActivityDateStatusDto> DatesData { get; set; } = [];
     }
 }

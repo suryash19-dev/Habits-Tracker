@@ -12,14 +12,14 @@ namespace Habits_Tracker.Configurations
 
             builder.HasKey(d => d.Id);
 
-            builder.Property(d => d.MetricDate)
+            builder.Property(d => d.Date)
                .HasColumnType("date")
                .IsRequired();
 
             builder.Property(d => d.MetricValue)
                .HasPrecision(6, 2);
 
-            builder.HasIndex(d => new { d.MetricDefinitionId, d.MetricDate })
+            builder.HasIndex(d => new { d.MetricDefinitionId, d.Date })
                .IsUnique();
 
             builder.HasOne(d => d.MetricDefinition)

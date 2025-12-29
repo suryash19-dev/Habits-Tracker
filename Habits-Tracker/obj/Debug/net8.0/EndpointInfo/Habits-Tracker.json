@@ -132,6 +132,90 @@
         }
       }
     },
+    "/api/DailyMetricValue": {
+      "put": {
+        "tags": [
+          "DailyMetricValue"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DailyMetricValueDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DailyMetricValueDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DailyMetricValueDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/GetDashboard": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "parameters": [
+          {
+            "name": "date",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/HabitLog": {
+      "put": {
+        "tags": [
+          "HabitLog"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HabitLogDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HabitLogDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HabitLogDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/MetricDefinition/GetAllMetricDefinitions": {
       "get": {
         "tags": [
@@ -275,6 +359,48 @@
           "activityDetails": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DailyMetricValueDto": {
+        "required": [
+          "metricDefinitionId"
+        ],
+        "type": "object",
+        "properties": {
+          "metricDefinitionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "metricValue": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HabitLogDto": {
+        "required": [
+          "activityId"
+        ],
+        "type": "object",
+        "properties": {
+          "activityId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "logDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "isDone": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

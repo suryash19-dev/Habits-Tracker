@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Habits_Tracker.Migrations
 {
     /// <inheritdoc />
-    public partial class dbchanges : Migration
+    public partial class implementationDone : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

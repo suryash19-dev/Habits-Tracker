@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Habits-Tracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54e12e8c34d789e58467a7f5b1b8bea3b452c323")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b714e60f0538f376132ea905b787d74c707b7c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Habits-Tracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Habits-Tracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
